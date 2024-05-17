@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <!-- Login Form -->
+        <div id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <button onclick="login()">Login</button>
+        </div>
+        <!-- Admin Options -->
+        <div id="admin-options" style="display: none;">
+            <h2>Select Page</h2>
+            <select id="page-select" onchange="loadLinks()">
+                <option value="meditation">Meditation</option>
+                <option value="books">Books</option>
+                <option value="breathing">Breathing Techniques</option>
+                <option value="yoga">Yoga</option>
+            </select>
+            <h2>Add Link</h2>
+            <input type="text" id="link-title" placeholder="Link Title">
+            <input type="text" id="link-url" placeholder="Link URL">
+            <button onclick="addResource()">Add Link</button>
+            <h2>Existing Links</h2>
+            <ul id="link-list"></ul>
+            <h2>Page Links</h2>
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="mindfulness.html" target="_blank">Meditation</a></li>
+                <li><a href="books.html" target="_blank">Books</a></li>
+                <li><a href="breathing.html" target="_blank">Breathing Techniques</a></li>
+                <li><a href="yoga.html" target="_blank">Yoga</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/admin_script.js"></script>
+</body>
+</html>
